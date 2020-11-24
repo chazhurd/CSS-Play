@@ -1,7 +1,8 @@
 body{
-    background-color: black;
+    background: rgba(0,0,0,0.8);
 }
 *{
-    color: white;
-    margin-left: 20px
+    color: dodgerblue;
+    margin-left: 20px;
+    
 }
