@@ -7,14 +7,14 @@ function startPage(){
     let myTimer = setInterval(lineBlinker,333);
     function lineBlinker(){
         if(myTiming%2 == 0){
-            document.getElementById("intro").hidden = true;
+            document.getElementById("intro").innerHTML = "|";
             
             }
             else{
-            document.getElementById("intro").hidden = false;
+            document.getElementById("intro").innerHTML = "_";
         }   
         myTiming++;
-        if(myTiming == 4){
+        if(myTiming == 6){
             clearInterval(myTimer);
             startWorld();
             myTiming =0;
@@ -22,10 +22,12 @@ function startPage(){
     }
 }
 function startWorld(){
+        document.getElementById("intro").innerHTML ="_";
     let myTimer = setInterval(blinker,100);
     function blinker(){
         switch(myLetLocation){
-            case 0: document.getElementById("intro").innerHTML += myLetters[0];
+            case 0: 
+                    document.getElementById("intro").innerHTML = myLetters[0];
                     break;
             case 1: document.getElementById("intro").innerHTML += myLetters[1];
                     break;
@@ -48,27 +50,10 @@ function startWorld(){
             case 10: document.getElementById("intro").innerHTML += myLetters[10];
                     break;
             case 25: clearInterval(myTimer);
-                    showHats();
+                    //showHats();
                     break;
         }
         myLetLocation++;
     }
 }
 
-function showHats(){
-        document.getElementById("intro").innerHTML = "";
-        var mySeHat = document.getElementById("mySe");
-        var myPaintHat = document.getElementById("myPaint");
-        let myTimer = setInterval(showBiz, 2);
-
-        function showBiz(){
-                mySeHat.width += 6;
-                mySeHat.height += 3;
-                myPaintHat.width += 6;
-                myPaintHat.height += 3;
-                if(mySeHat.width >= 389){
-                        clearInterval(myTimer);
-                }
-        }
-
-}

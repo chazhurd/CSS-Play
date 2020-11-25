@@ -3,6 +3,13 @@ body{
 }
 *{
     color: dodgerblue;
-    margin-left: 20px;
-    
 }
+div{
+    text-align: center;
+}
+.myImages {
+    border-radius: 2px;
+  }
+.myImages:hover {
+    box-shadow: 0 0 8px 4px rgba(0, 140, 186, 0.5);
+  }
