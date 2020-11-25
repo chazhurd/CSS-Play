@@ -14,14 +14,15 @@ function startPage(){
             document.getElementById("intro").hidden = false;
         }   
         myTiming++;
-        if(myTiming == 8){
+        if(myTiming == 4){
             clearInterval(myTimer);
             startWorld();
+            myTiming =0;
         }
     }
 }
 function startWorld(){
-    var myTimer = setInterval(blinker,200);
+    let myTimer = setInterval(blinker,100);
     function blinker(){
         switch(myLetLocation){
             case 0: document.getElementById("intro").innerHTML += myLetters[0];
@@ -46,10 +47,28 @@ function startWorld(){
                     break;
             case 10: document.getElementById("intro").innerHTML += myLetters[10];
                     break;
-            case 11: clearInterval(myTimer);
-                    window.location.href = "myCV.html";
+            case 25: clearInterval(myTimer);
+                    showHats();
                     break;
         }
         myLetLocation++;
     }
+}
+
+function showHats(){
+        document.getElementById("intro").innerHTML = "";
+        var mySeHat = document.getElementById("mySe");
+        var myPaintHat = document.getElementById("myPaint");
+        let myTimer = setInterval(showBiz, 2);
+
+        function showBiz(){
+                mySeHat.width += 6;
+                mySeHat.height += 3;
+                myPaintHat.width += 6;
+                myPaintHat.height += 3;
+                if(mySeHat.width >= 389){
+                        clearInterval(myTimer);
+                }
+        }
+
 }
