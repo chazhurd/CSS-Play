@@ -7,23 +7,25 @@
         <link rel="stylesheet" href="myStyle.css">
     </head>
     <body onload="startPage()">
+        <div id="container">
         <div id="intro" class="center">
             
         </div>
         <br/>
         <br/>
-        <div id="mySHat" class="center">
-            
+        <div id="mySHatDiv" class="center">
+            <button onclick="showHats()">Slide</button>
             <img src="mySeHat.jpg" width="300" height="100" id="mySe" class="myImages" onmouseover="document.getElementById('mySe').src='seBizLit.jpg'" onmouseout="document.getElementById('mySe').src='mySeHat.jpg'">
             <p id="se"></p>
         </div>
-        <div id="myPHat" class="center">
+        <div id="myPHatDiv" class="center">
             <img src="myPaintHat.jpg" width="300" height="100" id="myPaint" class="myImages" onmouseover="document.getElementById('myPaint').src='myPaintHatLit.jpg'" onmouseout="document.getElementById('myPaint').src='myPaintHat.jpg'">
             <p id="pa"></p>  
         </div>
-        <div id="myEntHat" class="center">
+        <div id="myEntHatDiv" class="center">
             <img src="myEntHat.jpg" width="300" height="100" id="myE" class="myImages" onmouseover="document.getElementById('myE').src='myEntHatLit.jpg'" onmouseout="document.getElementById('myE').src='myEntHat.jpg'">
             <p id="en"></p>  
         </div>
+    </div>
     </body>
 </html>

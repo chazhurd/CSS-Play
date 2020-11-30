@@ -4,6 +4,18 @@ var myTiming=0;
 
 
 function startPage(){
+    var mySoftDiv = document.getElementById("mySHatDiv");
+    mySoftDiv.style.left = '20px';
+    mySoftDiv.style.top = '20px';
+    var myPaintDiv = document.getElementById("myPHatDiv");
+    myPaintDiv.style.left = '20px';
+    myPaintDiv.style.top = '170px';
+    var myEntDiv = document.getElementById("myEntHatDiv");
+    myEntDiv.style.left = '20px';
+    myEntDiv.style.top = '270px';
+
+
+
     let myTimer = setInterval(lineBlinker,333);
     function lineBlinker(){
         if(myTiming%2 == 0){
@@ -48,12 +60,44 @@ function startWorld(){
             case 9: document.getElementById("intro").innerHTML += myLetters[9];
                     break;
             case 10: document.getElementById("intro").innerHTML += myLetters[10];
-                    break;
+                     break;
             case 25: clearInterval(myTimer);
-                    //showHats();
+                    showHats();
                     break;
         }
         myLetLocation++;
     }
 }
+var hatTimer;
+function showHats(){
+        var mySeDiv = document.getElementById("mySHatDiv");
+        hatTimer = setInterval(moveHats,1);
+        var sPos = -400;
+                function moveHats(){
+                        mySeDiv.style.left =   sPos + "px";
+                        sPos+=20;
+                        if(sPos > 20){
+                                clearInterval(hatTimer);
+                                flashHat();
+                        }
+                }
+
+}
+
+function flashHat(){
+        var x=0;
+        var timer = setInterval(flasher,10)
+        var myPic = document.getElementById("mySe");
+        function flasher(){
+                if(x<5){
+                        document.getElementById("mySe").style.boxShadow = "0px 0px 20px blue";
+                }else{
+                        document.getElementById("mySe").style.boxShadow  = "0px 0px 0px red";
+                }
+                x++;
+        }
+
+}
+
+
 

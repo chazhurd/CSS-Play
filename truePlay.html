@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script>
+          var slowUp;
+          function increaseClipHeight(){
+            var x =100;
+            slowUp = setInterval(incWidth, 5);
+            function incWidth(){
+              if(x<300){
+              document.getElementById("mrClippy").width = "" + x +"";
+              x += 20;
+              }else{
+                clearInterval(slowUp);
+              }
+            }
+          }
+          function decreaseClipHeight(){
+            clearInterval(slowUp);
+            document.getElementById("mrClippy").width = "100";
+          }
+        </script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       <style>
+            /* unvisited link */
+            a:link {
+            color: red;
+            }
+            /* visited link */
+            a:visited {
+            color: green;
+            }
+            /* mouse over link */
+            a:hover {
+            color: hotpink;
+            }
+            /* selected link */
+            a:active {
+            color: blue;
+            } 
+
+            /* for lists , its shorthand, the image is bound by a square*/
+            ul {
+                list-style: square inside url("check.jpg");
+            }
+
+
+            /*tables*/
+            table, td, th {
+            border: 1px solid black;
+            text-align: center;
+            }
+
+            table {
+            border-collapse: collapse;
+            width: 50%;
+            }
+
+            th {
+            height: 50px;
+            }
+            tr:hover {background-color: #f5f5f5;}
+
+            .chunk table {
+            border-spacing: 0.5rem;
+                }
+            .chunk td {
+                padding: 0.5rem;
+                }
+            .chunk td:nth-child(1) { background: hsl(150, 50%, 50%); }
+            .chunk td:nth-child(2) { background: hsl(160, 60%, 50%); }
+            .chunk td:nth-child(3) { background: hsl(170, 70%, 50%); }
+            .chunk td:nth-child(4) { background: hsl(180, 80%, 50%); }
+            .chunk td:nth-child(5) { background: hsl(190, 90%, 50%); }
+            .chunk td:nth-child(6) { background: hsl(200, 99%, 50%); }
+            .chunk td:hover {background-color: #ff0707;}
+
+            /* margin width */
+            div.untamed {
+            width: 500px;
+            margin: auto;
+            border: 3px solid #73AD21;
+            }
+
+            div.limited {
+            max-width: 500px;
+            margin: auto;
+            border: 3px solid #212aad;
+            }
+
+            #mrClippy{
+              position:fixed;
+              bottom: 0;
+              right: 0;
+              opacity: .9;
+
+            }
+          #floater{
+              max-width: 500px;
+              margin: auto;
+              border: 3px solid #49009c;
+          }
+          #floatr{
+              float:right;
+          }
+          #floatel{
+              width: 500px;
+              padding: 10px;
+              margin: auto;
+              border: 3px solid #00d4b1;
+          }
+          #floatl{
+              float:left;
+          }
+          p{
+              overflow: auto;
+              padding: 10px;
+          }
+            /* this is whats needed to center an image wow*/
+          #centeredImage{
+              display: block;
+              margin-left: auto;
+              margin-right: auto;
+              width: 40%;
+          }
+
+            /*all paragraphs' first letter, could refine like p.intro::blah!*/
+          p::first-letter {
+            color: #ff0000;
+            font-variant: small-caps;
+          }  
+          div::before {
+          content: url(check.jpg);
+        }
+        /*user selection (highlighted text)*/
+        ::selection {
+          color: red;
+          background: yellow;
+        }
+        /*for drop down nav bar*/
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+        }
+
+        li {
+          float: left;
+        }
+
+        li a, .dropbtn {
+          display: inline-block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+          background-color: red;
+        }
+
+        li.dropdown {
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: #f1f1f1;}
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+        ol {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #333;
+          position: -webkit-sticky; /* Safari */
+          position: sticky;
+          top: 0;
+        }
+
+        li.bar {
+          float: left;
+        }
+
+        li.bar a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        li.bar a:hover {
+          background-color: #111;
+        }
+
+        .active {
+          background-color: #4CAF50;
+        }
+        /*responive CSS*/
+        div.gallery {
+          border: 1px solid #ccc;
+        }
+
+        div.gallery:hover {
+          border: 1px solid #777;
+        }
+
+        div.gallery img {
+          width: 100%;
+          height: auto;
+        }
+
+        div.desc {
+          padding: 15px;
+          text-align: center;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        .responsive {
+          padding: 0 6px;
+          float: left;
+          width: 33.3%;
+        }
+
+        @media only screen and (max-width: 700px) {
+          .responsive {
+            width: 49.99999%;
+            margin: 6px 0;
+          }
+        }
+
+        @media only screen and (max-width: 500px) {
+          .responsive {
+            width: 100%;
+          }
+        }
+
+        .clearfix:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        textarea {
+          width: 100%;
+          height: 150px;
+          padding: 12px 20px;
+          box-sizing: border-box;
+          border: 2px solid #ccc;
+          border-radius: 4px;
+          background-color: #f8f8f8;
+          font-size: 16px;
+          resize: none;
+        }
+        input[type=text], select {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+        }
+
+        input[type=submit] {
+          width: 100%;
+          background-color: #4CAF50;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+
+        div.form {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        }
+
+       </style>
+
+       <title>w3 CSS Run</title>
+    </head>
+    <body>
+    
+      
+        
+      
+      <div>
+        <ol class="bar">
+          <li class="bar"><a class="active" href="#intro">Home</a></li>
+          <li class="bar"><a href="#limit">Positioning</a></li>
+          <li class="bar"><a href="#classes">Psuedo</a></li>
+        </ol>
+      
+
+      <div id="intro">
+            The begining of w3 css tutorial. Below are some Font Awesome icons. (scripts) <br/>
+            <i class="fas fa-cloud"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-car"></i>
+            <i class="fas fa-file"></i>
+            <i class="fas fa-bars"></i> <br/>
+
+            Some bootstrap icons<br/>
+            <i class="glyphicon glyphicon-cloud"></i>
+            <i class="glyphicon glyphicon-remove"></i>
+            <i class="glyphicon glyphicon-user"></i>
+            <i class="glyphicon glyphicon-envelope"></i>
+            <i class="glyphicon glyphicon-thumbs-up" style="color: blue;"></i><br/>
+
+            some google icons<br/>
+            <i class="material-icons" style="color: cornflowerblue;">cloud</i>
+            <i class="material-icons">favorite</i>
+            <i class="material-icons">attachment</i>
+            <i class="material-icons">computer</i>
+            <i class="material-icons">traffic</i><br/>
+
+            <a href="https://www.google.com" target="_Blank" style="cursor:crosshair">Hit Me To Go To Google</a>
+
+            <br/>
+            <hr/>
+            <p>Mouse over the words to change the cursor.</p>
+            <span style="cursor:auto">auto</span><br>
+            <span style="cursor:crosshair">crosshair</span><br>
+            <span style="cursor:default">default</span><br>
+            <span style="cursor:e-resize">e-resize</span><br>
+            <span style="cursor:help">help</span><br>
+            <span style="cursor:move">move</span><br>
+            <span style="cursor:n-resize">n-resize</span><br>
+            <span style="cursor:ne-resize">ne-resize</span><br>
+            <span style="cursor:nw-resize">nw-resize</span><br>
+            <span style="cursor:pointer">pointer</span><br>
+            <span style="cursor:progress">progress</span><br>
+            <span style="cursor:s-resize">s-resize</span><br>
+            <span style="cursor:se-resize">se-resize</span><br>
+            <span style="cursor:sw-resize">sw-resize</span><br>
+            <span style="cursor:text">text</span><br>
+            <span style="cursor:w-resize">w-resize</span><br>
+            <span style="cursor:wait">wait</span><br>
+            <br/>
+            <hr>
+            <h2>CSS Lists</h2>
+            <p>The list-style property is a shorthand property, which is used to set all the list properties in one declaration.</p>
+
+            <!--<ul>
+                <li>Coffee</li>
+                <li>Tea</li>
+                <li>Coca Cola</li>
+            </ul>-->
+            <br/>
+            <hr/>
+            <h2>CSS Tables</h2>
+            <table>
+                <tr>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Savings</th>
+                </tr>
+                <tr>
+                  <td>Peter</td>
+                  <td>Griffin</td>
+                  <td>$100</td>
+                </tr>
+                <tr>
+                  <td>Lois</td>
+                  <td>Griffin</td>
+                  <td>$150</td>
+                </tr>
+                <tr>
+                  <td>Joe</td>
+                  <td>Swanson</td>
+                  <td>$300</td>
+                </tr>
+                <tr>
+                  <td>Cleveland</td>
+                  <td>Brown</td>
+                  <td>$250</td>
+                </tr>
+            </table>
+              <br/>
+
+              
+
+            <table class="chunk">
+                    <tr>
+                    <td>This</td>
+                    <td>Little</td>
+                    <td>Piggy</td>
+                    <td>Went</td>
+                    <td>To</td>
+                    <td>Market</td>
+                    </tr>
+                    <tr>
+                    <td colspan="2">This</td>
+                    <td>Little</td>
+                    <td>Piggy</td>
+                    <td>Went</td>
+                    <td>To</td>
+                    </tr>
+                    <tr>
+                    <td colspan="4">This</td>
+                    <td rowspan="3">Little</td>
+                    <td>Piggy</td>
+                    </tr>
+                    <tr>
+                    <td rowspan="2">This</td>
+                    <td>Little</td>
+                    <td>Piggy</td>
+                    <td>Went</td>
+                    <td>To</td>
+                    </tr>
+                    <tr>
+                    <td>Little</td>
+                    <td>Piggy</td>
+                    <td>Went</td>
+                    <td>To</td>
+                    </tr>
+            </table>
+
+                <br/>
+                <hr/>
+                <h2> The Display Property</h2>
+                The display property specifies if/how an element is displayed. Commented are block & inlinne elements:
+                <!-- 
+                <div>
+                <h1> - <h6>
+                <p>
+                <form>
+                <header>
+                <footer>
+                <section>
+                    inline are :
+                <span>
+                <a>
+                <img>
+                -->
+                CSS gives the ability to change the way these elements are displayed however. Display:Block or Inline..
+                Block level takes the entire width of the screen. 
+        </div>
+        <div class="untamed">
+          This is a max of 500 pixel and unmanaged
+
+        </div>
+        <div class="limited" id="limit"> 
+          This has a max of 500 piels and is managed b screen size
+
+        </div>
+        <div>
+                <br>
+                <h3>Positioning</h4>
+                Position is static by defualt. Use CSS to change it up. Below are some ways to do so:<br>
+                >> position: relative; is positioned relative to its normal position.<br>
+                >> position: fixed; is positioned relative to the viewport (mr clippy br)<br>
+                <img src="mrClippy.png" alt="mr.Clippy" id="mrClippy" onmouseover="increaseClipHeight()" onmouseout="decreaseClipHeight()" width="100px">
+                >> position: absolute; is positioned relative to the nearest positioned ancestor (div in div or w/e is parent, great for adding text in an image <i><strong>(does it work with animation?)</i></strong>)<br>
+                >> position: sticky; is positioned based on the user's scroll position (sim to fixed);
+                <br>
+                <h4> Overlapping elements</h4>
+                >> The z-index property specifies the stack order of an element (which element should be placed in front of, or behind, the others). z-index: -1;
+                  <h4>Overflow</h4>
+                  The option is to tell the browser whether the block element will need scroll bars and or to have the ability, or not, to reach beyond the blocks height.
+                  The overflow property only works for block elements with a specified height
+                  probably wont use this since most browsers are phones now and scroll bars arent very cool. 
+                  <br/>
+                  <h4>Floating</h4>
+                  <p id="floater"><img src="first.jpg" id="floatr" alt="check image" width="200px">The float property is used for positioning and formatting content: for instance this photo can float to the right</p>
+                  <p id="floatel">Most commonly the left float is used. It just looks more proper i guess. <img src="angryClip.png" id="floatl" alt="check image" height="150px"> The image can "float" but will only be floating next to the text that comes after the image element. sksjakdjalsjflkasjdlkjaslkfjaslkjfdalksjdkljsalkdjaslkhfha sa dljaksd laskjd aslkjd alkj</p>
+                  <p>Center an image you must set it to a block, set right to float AND set left to float. Quite a bit</p>
+                  <img id="centeredImage" src="myEntHat.jpg"> <br/>
+                  <hr>
+                  <br>
+          </div>
+
+          <div id="classes">
+                  <h3>Pseudo Classes</h3>
+                  A pseudo-class is used to define a special state of an element.
+
+                  For example, it can be used to:
+                  <br>
+                      Style an element when a user mouses over it
+                      Style visited and unvisited links differently
+                      Style an element when it gets focus
+                  Example:<br>
+                  Pseudo-classes can be combined with CSS classes:
+                  a.highlight:hover {
+                    color: #ff0000;
+                  }
+                  <br>
+                  the CSS class highlight is being combined with the Pseudo class Hover. These classes are not case sensistive.
+                  <br>                  
+                  To use these just pick the element type and choose the class. (DIV:HOVER)
+                  <br>
+
+                  <h3>Pseudo-Element</h3>
+                  selector::pseudo-element {
+                    property: value;
+                  }<br>
+                  To select the first line in all paragraphs for example would be:
+                  <br>
+                  p::first-line {
+                    color: #ff0000;
+                    font-variant: small-caps;
+                  }
+                  <br>
+                  In a more rare case but cool none the less: if a USER selects soething on your page you can 
+                  change the way it highlights, or whatever. 
+          </div>
+
+          <div>
+                ::selection {
+                  color: red;
+                  background: yellow;
+                }
+                <br>
+                <br>
+                <hr>
+                <h3>Nav Bars</h3>
+                <br>
+                <p>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li class="dropdown">
+                  <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </li>
+                <br><br>
+                </p>
+                <h3>Responsive Gallery</h3>
+                <p>We dont want to make the website static, we should try and make it for every browser type
+                 for instance this gallery:
+                </p>
+                <div class="responsive">
+                  <div class="gallery">
+                    <a target="_blank" href="myEntHatLit.jpg">
+                      <img src="myEntHat.jpg" alt="Entre" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                  </div>
+                </div>
+                
+                
+                <div class="responsive">
+                  <div class="gallery">
+                    <a target="_blank" href="myPaintHatLit.jpg">
+                      <img src="myPaintHat.jpg" alt="Paint" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                  </div>
+                </div>
+                
+                <div class="responsive">
+                  <div class="gallery">
+                    <a target="_blank" href="mySeHat.jpg">
+                      <img src="mySeHat.jpg" alt="Software" width="600" height="400">
+                    </a>
+                    <div class="desc">Add a description of the image here</div>
+                  </div>
+                </div>
+          </div>
+        </div>
+        <div>
+          <h3>
+            Forms
+          </h3>
+          <h3>Using CSS to style an HTML Form</h3>
+
+          <div class="form">
+            <form action="doSomething()">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for="country">Country</label>
+              <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+              </select>
+              <textarea name="myTextArea" id="txtArea" cols="30" rows="10">Enter Your Request</textarea>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+         
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+    </body>
+    <footer>
+
+    </footer>
+</html>
