@@ -369,6 +369,55 @@
               </div>
             </div>
           </div>
+          <hr>
+          <div id="multipleBackgrounds">
+            Here we have multiple backgrounds.
+          </div>
+          <div id="spacer"></div>
+          <div id="sunset">
+          </div>
+          <div id="spacer"></div>
+          <script>
+
+            setInterval(sunset, 20);
+            var mySunset = 0;
+            function sunset(){
+              if(mySunset < 20){
+                document.getElementById("sunset").style.backgroundImage = "linear-gradient(to right, yellow , red)";
+                document.getElementById("sunset").innerHTML = "The Sun May Rise In The East";
+                document.getElementById("sunset").style.textAlign = "left";
+              }
+              if(mySunset >20 && mySunset< 40){
+                document.getElementById("sunset").style.backgroundImage ="linear-gradient(yellow, red)"
+                document.getElementById("sunset").innerHTML = "But Atleast";
+                document.getElementById("sunset").style.textAlign = "center";
+              }
+              if(mySunset>40){
+                document.getElementById("sunset").style.backgroundImage = "linear-gradient(to right, red ,yellow)";
+                document.getElementById("sunset").innerHTML = "It Settled In A Final Location";
+                document.getElementById("sunset").style.textAlign = "right";
+              }
+              if(mySunset > 60){
+                mySunset = 0;
+              }
+
+              mySunset++;
+            }
+          </script>
+          <div>
+            <hr>
+            <h2>Shadows</h2>
+            <P>Shadows can be applied to text to create a neon look, images to give it a shadow or to make it look like paper like this one:</p>
+                <div class="polaroid">
+                  <img src="header.jpg" alt="Norway" style="width:100%">
+                  <div class="container2">
+                    <p>Blue Marble</p>
+                  </div>
+                </div>
+          </div>
+          <div id="spacer"></div>
+          
+
 
 
 
