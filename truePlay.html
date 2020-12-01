@@ -23,300 +23,14 @@
         </script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-       <style>
-            /* unvisited link */
-            a:link {
-            color: red;
-            }
-            /* visited link */
-            a:visited {
-            color: green;
-            }
-            /* mouse over link */
-            a:hover {
-            color: hotpink;
-            }
-            /* selected link */
-            a:active {
-            color: blue;
-            } 
-
-            /* for lists , its shorthand, the image is bound by a square*/
-            ul {
-                list-style: square inside url("check.jpg");
-            }
-
-
-            /*tables*/
-            table, td, th {
-            border: 1px solid black;
-            text-align: center;
-            }
-
-            table {
-            border-collapse: collapse;
-            width: 50%;
-            }
-
-            th {
-            height: 50px;
-            }
-            tr:hover {background-color: #f5f5f5;}
-
-            .chunk table {
-            border-spacing: 0.5rem;
-                }
-            .chunk td {
-                padding: 0.5rem;
-                }
-            .chunk td:nth-child(1) { background: hsl(150, 50%, 50%); }
-            .chunk td:nth-child(2) { background: hsl(160, 60%, 50%); }
-            .chunk td:nth-child(3) { background: hsl(170, 70%, 50%); }
-            .chunk td:nth-child(4) { background: hsl(180, 80%, 50%); }
-            .chunk td:nth-child(5) { background: hsl(190, 90%, 50%); }
-            .chunk td:nth-child(6) { background: hsl(200, 99%, 50%); }
-            .chunk td:hover {background-color: #ff0707;}
-
-            /* margin width */
-            div.untamed {
-            width: 500px;
-            margin: auto;
-            border: 3px solid #73AD21;
-            }
-
-            div.limited {
-            max-width: 500px;
-            margin: auto;
-            border: 3px solid #212aad;
-            }
-
-            #mrClippy{
-              position:fixed;
-              bottom: 0;
-              right: 0;
-              opacity: .9;
-
-            }
-          #floater{
-              max-width: 500px;
-              margin: auto;
-              border: 3px solid #49009c;
-          }
-          #floatr{
-              float:right;
-          }
-          #floatel{
-              width: 500px;
-              padding: 10px;
-              margin: auto;
-              border: 3px solid #00d4b1;
-          }
-          #floatl{
-              float:left;
-          }
-          p{
-              overflow: auto;
-              padding: 10px;
-          }
-            /* this is whats needed to center an image wow*/
-          #centeredImage{
-              display: block;
-              margin-left: auto;
-              margin-right: auto;
-              width: 40%;
-          }
-
-            /*all paragraphs' first letter, could refine like p.intro::blah!*/
-          p::first-letter {
-            color: #ff0000;
-            font-variant: small-caps;
-          }  
-          div::before {
-          content: url(check.jpg);
-        }
-        /*user selection (highlighted text)*/
-        ::selection {
-          color: red;
-          background: yellow;
-        }
-        /*for drop down nav bar*/
-        ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #333;
-        }
-
-        li {
-          float: left;
-        }
-
-        li a, .dropbtn {
-          display: inline-block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-
-        li a:hover, .dropdown:hover .dropbtn {
-          background-color: red;
-        }
-
-        li.dropdown {
-          display: inline-block;
-        }
-
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
-        }
-
-        .dropdown-content a {
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-          text-align: left;
-        }
-
-        .dropdown-content a:hover {background-color: #f1f1f1;}
-
-        .dropdown:hover .dropdown-content {
-          display: block;
-        }
-        ol {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          background-color: #333;
-          position: -webkit-sticky; /* Safari */
-          position: sticky;
-          top: 0;
-        }
-
-        li.bar {
-          float: left;
-        }
-
-        li.bar a {
-          display: block;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
-        }
-
-        li.bar a:hover {
-          background-color: #111;
-        }
-
-        .active {
-          background-color: #4CAF50;
-        }
-        /*responive CSS*/
-        div.gallery {
-          border: 1px solid #ccc;
-        }
-
-        div.gallery:hover {
-          border: 1px solid #777;
-        }
-
-        div.gallery img {
-          width: 100%;
-          height: auto;
-        }
-
-        div.desc {
-          padding: 15px;
-          text-align: center;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-
-        .responsive {
-          padding: 0 6px;
-          float: left;
-          width: 33.3%;
-        }
-
-        @media only screen and (max-width: 700px) {
-          .responsive {
-            width: 49.99999%;
-            margin: 6px 0;
-          }
-        }
-
-        @media only screen and (max-width: 500px) {
-          .responsive {
-            width: 100%;
-          }
-        }
-
-        .clearfix:after {
-          content: "";
-          display: table;
-          clear: both;
-        }
-
-        textarea {
-          width: 100%;
-          height: 150px;
-          padding: 12px 20px;
-          box-sizing: border-box;
-          border: 2px solid #ccc;
-          border-radius: 4px;
-          background-color: #f8f8f8;
-          font-size: 16px;
-          resize: none;
-        }
-        input[type=text], select {
-          width: 100%;
-          padding: 12px 20px;
-          margin: 8px 0;
-          display: inline-block;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-        }
-
-        input[type=submit] {
-          width: 100%;
-          background-color: #4CAF50;
-          color: white;
-          padding: 14px 20px;
-          margin: 8px 0;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-
-        input[type=submit]:hover {
-          background-color: #45a049;
-        }
-
-        div.form {
-          border-radius: 5px;
-          background-color: #f2f2f2;
-          padding: 20px;
-        }
-
-       </style>
-
+        <link rel="stylesheet" href="playStyles.css">
        <title>w3 CSS Run</title>
     </head>
     <body>
     
-      
+      <div class="header">
+        <h1>MyHEader</h1>
+      </div>
         
       
       <div>
@@ -538,9 +252,7 @@
                   <br>
                   In a more rare case but cool none the less: if a USER selects soething on your page you can 
                   change the way it highlights, or whatever. 
-          </div>
 
-          <div>
                 ::selection {
                   color: red;
                   background: yellow;
@@ -621,6 +333,23 @@
             </form>
           </div>
          
+        </div>
+        <div class="row">
+          <div class="column side">
+            <h2>Side</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+          </div>
+          
+          <div class="column middle">
+            <h2>Main Content</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+          </div>
+          
+          <div class="column side">
+            <h2>Side</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+          </div>
         </div>
 
 
