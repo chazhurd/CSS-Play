@@ -574,7 +574,7 @@ div.boxed{
     flex-direction: column;
   }
 }
-/* When the width is between 600px and 900px OR above 1100px - change the appearance of <div> */
+/* When the width is between 600px and 900px OR above 1100px - change the appearance of <div> kind of weird to have but who knows*/
 @media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
   div.multiQ {
     font-size: 20px;
