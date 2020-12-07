@@ -29,7 +29,7 @@
     <body>
     
       <div class="header">
-        <h1>MyHEader</h1>
+        <h1>CSS Play</h1>
       </div>
         
       
@@ -409,16 +409,151 @@
             <h2>Shadows</h2>
             <P>Shadows can be applied to text to create a neon look, images to give it a shadow or to make it look like paper like this one:</p>
                 <div class="polaroid">
-                  <img src="header.jpg" alt="Norway" style="width:100%">
+                  <img src="header.jpg" alt="Marble" style="width:100%">
                   <div class="container2">
                     <p>Blue Marble</p>
                   </div>
                 </div>
           </div>
           <div id="spacer"></div>
-          
+          <h3>Changing Fonts</h3>
+          <p>We can change fonts to different types by using css @Font Rule</p>
+          <p id="changedFont">For instance this font is different than others</p>
+          <p>Done by doing the @Font Rule</p>
+          <hr>
+          <h2>Transformations(Transform: ...)</h2>
+          <p><img src="bizproposal.png" width="100px" id="mySkewedPhoto">
+            translate(): moves the object in x or y direction<br>
+            rotate(): rotates with dgrees<br>
+            scaleX(): increases/dec size of width<br>
+            scaleY(): increases/dec size of height<br>
+            scale(): changes size<br>
+            skewX(): will skew along x axis<br>
+            skewY(): will skew along y axis with degree<br>
+            skew(): both x and y axis skewd<br>
+            matrix(): combines all 2d transformations in one: matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY()) <br>
+          </p>
+          <div id="transitions" class="tran" style="background-color: deepskyblue;">
+            <h2> CSS Transitions:</h2>
+            instead of using JavaScript to control the moition of images we can use CSS!
+            Using shorthand notation: transition: width 2s linear 1s 
+          </div>
+          <div class="tran" style="background-color: crimson;">sahdjashllkdsja asldljaslkjlksdjalk as kdjaslkdj asldkjas lkdjajslk asdjalksdj </div>
+          <div class="tran" style="background-color: darkolivegreen;">sahdjashllkdsja asldljaslkjlksdjalk as kdjaslkdj asldkjas lkdjajslk asdjalksdj </div>
+          <div class="spacer" style="display: block;"></div>
+          </div>
+          <br>
+          <h2>Animations using CSS @keyframes</h2>
+          <div style="height: 400px; width:50%; margin: auto;" class="animCont" >
+            <div class="animate" style="background-color: dimgrey;">WOW</div>
+          </div>
+          <hr>
+          <h2> Images with CSS</h2>
+          <div>
+            Pic As A Link: 
+            <a href="myPaintHat.jpg">
+              <img src="myPaintHat.jpg" alt="Painter" class="paintHatImg">
+            </a>
+            Fade in a box:
+            <div class="fadeContainer">
+              <img src="mySeHat.jpg" style="width: 100%;" class="fadeImage">
+              <div class="fadeMiddle">
+                <div class="fadeText">Hire Me</div></div>
+            </div>
+          </div>
+          <hr>
+          <h2>Animated Button</h2>
 
+          <button class="buttonAnimate" style="vertical-align:middle"><span>Hover </span></button>
+          <hr>
+          <div class="columns">
+            <h2>My Columns</h2>
+            This Div should be split into 3 columns: Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+          </div>
+          <hr>
+          <p><h2>CSS Var()</h2>
+          Var() is a key value. It is useful for when you use the same colors over and over again. May be easier to use this notation.
+          <br> You can access these variables with JavaScript. The variable can be changed dynamically for instance if the browser window size is greater than 450 pixels. </p>
+          <div class="unboxed">boxed without padding:     box-sizing: 300 width 100 height;</div>
+          <br>
+          <div class="boxed">Boxed with padding:    box-sizing: 300 width 100 height; </div>
+          <hr>
+          <div class="mediaQueries" style="width: 100%; height: 400px; margin: auto;">Media queries can be used to check many things, such as:
+            <br>
+            width and height of the viewport  
+            <br>
+            width and height of the device
+            <br>
+            orientation (is the tablet/phone in landscape or portrait mode?)
+            <br>
+            resolution
+            <br>
+            This Div will turn green if the viewport is greater than 480, as well as other change. 
+            <br>
+            <img src="seBizLit.jpg" style="display: inline-block;" class="mediaImage">
+            <hr>
+            Media Queries For Columns:<br>
 
+            A common use of media queries, is to create a flexible layout. In this example, we create a layout that varies between four, two and full-width columns, depending on different screen sizes:
+            <br>
+            With FlexBoxes
+            <br>
+            <br><div class="spacer"></div>
+            <div class="rowQ">
+              <div class="columnQ" style="background-color:#aaa;">
+                <h2>Row 1 Column 1</h2>
+                <p>Top Info </p>
+              </div>
+              
+              <div class="columnQ" style="background-color:#bbb;">
+                <h2>Row 1 Column 2</h2>
+                <p>Second info</p>
+              </div>
+              
+              <div class="columnQ" style="background-color:#ccc;">
+                <h2>Row 1 Column 3</h2>
+                <p>Some text..</p>
+              </div>
+              
+              <div class="columnQ" style="background-color:#ddd;">
+                <h2>Row 1 Column 4</h2>
+                <p>Some text..</p>
+              </div>
+            </div>
+            <div class="multiQ">Perhaps you want to add multiple stipulations to the Media Queries</div>
+            <div class="flexbox">
+            <h2>FlexBox</h2>
+            <p>The "flex-wrap: wrap;" specifies that the flex items will wrap if necessary: Justify-content is a way to align the divs withhn the flexbox. Also stretching, use that with alight items to get height alighnment and exact cetner
+              <br>
+            The flex item properties are:
+              <br>
+            order<br>
+            flex-grow<br>
+            flex-shrink<br>
+            flex-basis<br>
+            flex<br>
+            align-self<br>
+
+            </p>
+    
+            <div class="flex-container">
+              <div>1</div>
+              <div>2</div>
+              <div>3</div>  
+              <div>4</div>
+              <div>5</div>
+              <div>6</div>  
+              <div>7</div>
+              <div>8</div>
+              <div>9</div>  
+              <div>10</div>
+              <div>11</div>
+              <div>12</div>  
+            </div>
+          </div>
+
+          <p> with a lttle css @ media and many flex boxes we can create responsive websites!</p>          
+        </div>
 
 
 

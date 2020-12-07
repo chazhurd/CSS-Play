@@ -51,7 +51,7 @@
                 .chunk td:nth-child(6) { background: hsl(200, 99%, 50%); }
                 .chunk td:hover {background-color: #ff0707;}
     
-                /* margin width */
+                /* sizing and placing divs*/
                 div.untamed {
                 width: 500px;
                 margin: auto;
@@ -105,7 +105,7 @@
                 color: #ff0000;
                 font-variant: small-caps;
               }  
-              div::before {
+              /*div::before {
               content: url(check.jpg);
             }
             /*user selection (highlighted text)*/
@@ -173,6 +173,7 @@
               position: -webkit-sticky; /* Safari */
               position: sticky;
               top: 0;
+              z-index: 1;
             }
     
             li.bar {
@@ -356,4 +357,243 @@
   div.container2 {
     padding: 10px;
   }
-    
+  @font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+    font-stretch: expanded;
+ }
+ 
+ #changedFont {
+    font-family: myFirstFont;
+ }
+
+ #mySkewedPhoto{
+   transform: skewX(20deg);
+   float: inline-end;
+ }
+ div.tran {
+  width: 25%;
+  height: 200px;
+  float: inline;
+  transition: width 2s ease .1s;
+}
+div.tran:hover {
+  width: 75%;
+}
+div.animate {
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  /*  animation-name: example;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;*/
+  text-align: center;
+  padding: 50px;
+  animation: myfirst 5s ease 2s infinite alternate;
+  z-index: 0;
+
+}
+
+@keyframes myfirst {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px; transform: rotate(45deg);}
+  50%  {background-color:blue; left:200px; top:200px;transform: rotate(0deg)}
+  75%  {background-color:green; left:0px; top:200px;transform: rotate(-45deg)}
+  100% {background-color:red; left:0px; top:0px;}
+}
+div.animCont{
+  margin: auto;
+}
+.paintHatImg {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 250px;
+  display: inline-block;
+}
+
+.paintHatImg:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.fadeContainer {
+  position: relative;
+  width: 250px;
+  display: inline-block;
+}
+
+.fadeImage {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.fadeMiddle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.fadeContainer:hover .fadeImage {
+  opacity: 0.3;
+}
+
+.fadeContainer:hover .fadeMiddle {
+  opacity: 1;
+}
+
+.fadeText {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.buttonAnimate {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttonAnimate span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonAnimate span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.buttonAnimate:hover span {
+  padding-right: 25px;
+}
+
+.buttonAnimate:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+div.columns h2{
+  column-span: all;
+  position: relative;
+  left: 530px;
+}
+div.columns{
+  column-count: 3;  
+  column-gap: 40px;
+  column-rule-style: groove;
+}
+div.unboxed{
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+div.boxed{
+  width: 300px;
+  height: 100px;
+  padding: 50px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+/*if the screen is atleast 480px*/
+@media screen and (min-width:480px){
+  div.mediaQueries{
+    background-color: lightgreen;
+    font-size: 20px;
+  }
+}
+.mediaImage{
+  width:300px;
+  height:400px;
+}
+
+/* if the screen is less than 600px*/
+@media screen and (max-width:600px){
+  .mediaImage{
+    width: 100px;
+    height: 200px;
+  }
+  li{
+    display: none;
+  }
+}
+
+.rowQ, .columnQ {
+  box-sizing: border-box;
+}
+
+/* Container for flexboxes */
+.rowQ {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create four equal columns */
+.columnQ {
+  flex: 25%;
+  padding: 20px;
+}
+
+/*On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .columnQ {
+    flex: 50%;
+  }
+}
+
+/*On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .rowQ {
+    flex-direction: column;
+  }
+}
+/* When the width is between 600px and 900px OR above 1100px - change the appearance of <div> */
+@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px) {
+  div.multiQ {
+    font-size: 20px;
+    padding: 50px;
+    border: 8px solid black;
+    background: yellow;
+  }
+}
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
