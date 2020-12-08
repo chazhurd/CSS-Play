@@ -520,7 +520,7 @@
                 <p>Some text..</p>
               </div>
             </div>
-            <div class="multiQ">Perhaps you want to add multiple stipulations to the Media Queries</div>
+            <div class="multiQ">Perhaps you want to add multiple stipulations to the Media Queries say for a tablet</div>
             <div class="flexbox">
             <h2>FlexBox</h2>
             <p>The "flex-wrap: wrap;" specifies that the flex items will wrap if necessary: Justify-content is a way to align the divs withhn the flexbox. Also stretching, use that with alight items to get height alighnment and exact cetner
@@ -552,16 +552,83 @@
             </div>
           </div>
 
-          <p> with a lttle css @ media and many flex boxes we can create responsive websites! maybe another webpage for that</p>          
-        </div>
-
-
-
-
+          <p style="background-color: cornflowerblue;"> with a lttle css @media and many flex boxes we can create responsive websites! maybe another webpage for that</p>          
+        
+          <h2>Responsive Web Design.</h2>
+          <p style="background-color: cyan;">
+            Typical size breakpoints: <br>
+            /* Extra small devices (phones, 600px and down) */<br>
+            @media only screen and (max-width: 600px) {...}<br>
+            <br>
+            /* Small devices (portrait tablets and large phones, 600px and up) */<br>
+            @media only screen and (min-width: 600px) {...}<br>
+            <br>
+            /* Medium devices (landscape tablets, 768px and up) */<br>
+            @media only screen and (min-width: 768px) {...}<br>
+            <br>
+            /* Large devices (laptops/desktops, 992px and up) */<br>
+            @media only screen and (min-width: 992px) {...}<br>
+            <br>
+            /* Extra large devices (large laptops and desktops, 1200px and up) */<br>
+            @media only screen and (min-width: 1200px) {...} <br>
+            <br>
+            <h3>Orientation</h3>
+            @media only screen and (orientation: landscape) {
+              body {
+                background-color: lightblue;
+              }
+            }
+            <br>
+            <h3>Responsive backgrounds</h3>
+            <p>Instead of scaling images, use different ones for different medias</p>
+            /* For width smaller than 400px: */<br>
+            body {<br>
+              background-image: url('img_smallflower.jpg');<br>
+            }<br>
+            <br>
+            /* For width 400px and larger: */<br>
+            @media only screen and (min-width: 400px) {<br>
+              body {<br>
+                background-image: url('img_flowers.jpg');<br>
+              }<br>
+            } <br>
+            <br>
+            Using <strong>max-width</strong> the images or videos you show wonnt get very pizelated on large windows.
+            <br>
+            video {<br>
+              max-width: 100%;<br>
+              height: auto;<br>
+            }<br>
+          </p>
+          <h2>Grids</h2>
+          <div class="grid-containerG">
+            <div class="item1">1</div>
+            <div class="item2">2</div>
+            <div class="item3">3</div>  
+            <div class="item4">4</div>
+            <div class="item5">5</div>
+            <div class="item6">6</div>
+            <div class="item7">7</div>
+            <div class="item8">8</div>  
+            <div class="item9">9</div>
+            <div class="item10">10</div>
+            <div class="item11">11</div>
+            <div class="item12">12</div>
+            <div class="item13">13</div>
+            <div class="item14">14</div>
+            <div class="item15">15</div>
+          </div>
       </div>
+        
+      
 
 
-    </body>
+
+
+
+
+    </div>
+  </body>
     <footer>
 
     </footer>

@@ -597,3 +597,22 @@ div.boxed{
   line-height: 75px;
   font-size: 30px;
 }
+.grid-containerG {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-containerG > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item8 {
+  grid-area: 1 / 2 / 5 / 6;
+
+}
